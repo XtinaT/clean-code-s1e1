@@ -8,7 +8,7 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.querySelector(".task-item-text-input__add");//Add a new task.
+var taskInput=document.querySelector(".task-item-text__add");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.querySelector(".task__incompleted");//ul of .task__incompleted
 var completedTasksHolder=document.querySelector(".task__completed");//completed-tasks
@@ -37,12 +37,12 @@ var createNewTaskElement=function(taskString){
     listItem.className='task-item';
 
     //Each elements, needs appending
-    checkBox.className="task-item-checkbox-input";
+    checkBox.className="task-item-checkbox";
     checkBox.type="checkbox";
-    checkBox.className="task-item-checkbox-input";
+    checkBox.className="task-item-checkbox";
     label.className = "task-item-label";
     editInput.type="text";
-    editInput.className="task-item-text-input task-item-text-input__added";
+    editInput.className="task-item-text task-item-text__added";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="task-item-button task-item-button__edit";
@@ -87,7 +87,7 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('.task-item-text-input');
+    var editInput=listItem.querySelector('.task-item-text');
     var label=listItem.querySelector(".task-item-label");
     var editBtn=listItem.querySelector(".task-item-button__edit");
     var containsClass=listItem.classList.contains("task-item__editMode");
@@ -98,13 +98,13 @@ var editTask=function(){
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
-        editInput.classList.toggle("task-item-text-input__onEdit");
+        editInput.classList.toggle("task-item-text__onEdit");
         listItem.classList.toggle("task-item__editMode");
         label.classList.toggle("task-item-label__new");
     }else{
         editInput.value=label.innerText;
         editBtn.innerText="Save";
-        editInput.classList.toggle("task-item-text-input__onEdit");
+        editInput.classList.toggle("task-item-text__onEdit");
         listItem.classList.toggle("task-item__editMode");
         label.classList.toggle("task-item-label__new");
     }
@@ -171,7 +171,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector(".task-item-checkbox-input");
+    var checkBox=taskListItem.querySelector(".task-item-checkbox");
     var editButton=taskListItem.querySelector(".task-item-button__edit");
     var deleteButton=taskListItem.querySelector(".task-item-button__delete");
 
