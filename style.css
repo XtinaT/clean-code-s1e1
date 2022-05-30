@@ -132,16 +132,10 @@ body {
 }
 
 /* Edit Task */
-.task-item-text-input__new {
+.task-item-text-input__added {
   display: none;
 }
 
-
-
-.task-item-label__removed {
-  text-decoration: line-through;
-  color:#888;
-}
 
 .task-item-text-input__removed {
   display: none;
@@ -149,4 +143,12 @@ body {
 
 .task-item-label__new {
   display: none;
+}
+
+.task-item__editMode .task-item-label {
+  display:none;
+}
+.task-item-text-input__onEdit {
+  display: inline-block;
+  width: 224px;
 }
