@@ -9,17 +9,17 @@ body {
   display: block;
   text-align: right;
 }
-.header-img {
+.header__img {
   width: 100%;
 }
-.header-link {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
   .header,
-  .header-img,
-  .header-link { 
+  .header__img,
+  .header__link { 
     text-align: center;
   }
 }
@@ -33,15 +33,15 @@ body {
   margin: 0;
   padding: 0px;
 }
-.task_item {
+.task__item {
   list-style: none;
 }
-.task-item-text,
-.task-item-checkbox,
-.task-item-button {
+.task__text,
+.task__checkbox,
+.task__button {
   outline: none;
 }
-.task-item-button {
+.task__button {
   background: none;
   border: 0px;
   color: #888;
@@ -50,10 +50,10 @@ body {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-.task-item-button:hover {
+.task__button:hover {
   color: #3a3a3a;
 }
-.main-header {
+.main__header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -62,7 +62,7 @@ body {
   margin: 0;
   text-transform: uppercase;
 }
-.task-item-text {
+.task__text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -74,10 +74,10 @@ body {
   font-family: Lato, sans-serif;
   color: #888;
 }
-.task-item-text:focus {
+.task__text:focus {
   color: #333;
 }
-.task-item {
+.task__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -85,13 +85,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.task-item > * {
+.task__item > * {
   vertical-align: middle;
 }
-.task-item-checkbox {
+.task__checkbox {
   margin: 0 10px;
 }
-.task-item-label {
+.task__label {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -99,35 +99,35 @@ body {
   box-sizing: border-box;
   font-size: 18px;
 }
-.task-item-text {
+.task__text {
   width: 226px;
   flex-grow: 1;
 }
-.task-item-delete-button-img {
+.task__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.task-item-delete-button-img:hover {
+.task__img:hover {
   transform: rotateZ(0);
 }
-.task-item-label__completed {
+.task__label_completed {
   text-decoration: line-through;
   color: #888;
 }
-.task-item-text__added {
+.task__text_added {
   display: none;
 }
-.task-item-text__removed {
+.task__text_removed {
   display: none;
 }
-.task-item-label__new {
+.task__label_new {
   display: none;
 }
-.task-item__editMode .task-item-label {
+.task__item_editMode .task__label {
   display: none;
 }
-.task-item-text__onEdit {
+.task__text_onEdit {
   display: inline-block;
   width: 224px;
 }
